@@ -26,7 +26,15 @@ public class welcomeToLeague {
         String role4 = "ADC";
         String role5 = "Support";
 
-        //Create 
+        //Ask the user to enter the role the selected in the display screen:
+        System.out.println("Please enter the role you selected down below: ");
+        String selectedRole = input.nextLine(); // <- the 'selected-role' variable declared + enterned by the user
+
+        //Create an 'if-else' scenario: [started on 02.06.24 -- having trouble with this]
+            if (selectedRole == "Top") {
+                System.out.println("Your position is the \"Top\" role.");
+                roleWindow = JOptionPane.showInputDialog("Please select your champion in the terminal.");              
+            }
 
 
 
