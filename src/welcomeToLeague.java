@@ -20,20 +20,40 @@ public class welcomeToLeague {
         JOptionPane.showMessageDialog(frame, "Refer to the terminal to continue.");
 
         //Declare the 5 Roles as variables:
-        String role1 = "Top";
-        String role2 = "Jungle";
-        String role3 = "Mid";
-        String role4 = "ADC";
-        String role5 = "Support";
+        int roleTop = 1;
+        int roleJungle = 2;
+        int roleMid = 3;
+        int roleADC = 4;
+        int roleSupport = 5;
 
         //Ask the user to enter the role the selected in the display screen:
-        System.out.println("Please enter the role you selected down below: ");
-        String selectedRole = input.nextLine(); // <- the 'selected-role' variable declared + enterned by the user
+        System.out.println("Please enter the number that was assigned to the role you selected");
+        System.out.println("Top [1], Jungle [2], Mid [3], ADC [4], or Support [5]" + " : ");
+        int selectedRole = input.nextInt(); // <- the 'selected-role' variable declared + enterned by the user
 
         //Create an 'if-else' scenario: [started on 02.06.24 -- having trouble with this]
-            if (selectedRole == "Top") {
-                System.out.println("Your position is the \"Top\" role.");
-                roleWindow = JOptionPane.showInputDialog("Please select your champion in the terminal.");              
+            if (selectedRole == 1) {
+                System.out.println("Your position is the \"Top\" role. Your champions will be displayed in the pop-up!");
+                JOptionPane.showMessageDialog(frame, "Champion List: Darius[1], Sett[2], Garen[3], Vayne[4], or Diana[5]"); 
+                JOptionPane.showMessageDialog(frame, "Enter the champion you would like to select in the terminal.");
+                System.out.println("Who would you like to play in the Top Lane?");
+                     //declaring the variables for user to select their champion
+                    int topDarius = 1, topSett = 2, topGaren = 3, topVayne = 4, topDiana = 5;
+                System.out.print("Enter your champion here: ");
+                int topChampSelected = input.nextInt();
+                    if (topChampSelected == 1){
+                        JOptionPane.showInputDialog("You chose Darius.");
+                    } else if (topChampSelected == 2){
+                        JOptionPane.showInputDialog("You chose Sett.");
+                    } else if (topChampSelected == 3) {
+                        JOptionPane.showInputDialog("You chose Garen.");
+                    } else if (topChampSelected == 4) {
+                        JOptionPane.showInputDialog("You chose Vayne.");
+                    } else if (topChampSelected == 5){
+                    JOptionPane.showInputDialog("You chose Diana.");
+                    } else
+                        System.out.println("Please select a listed champion.");
+
             }
 
 
